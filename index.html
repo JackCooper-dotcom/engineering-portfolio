@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jack Cooper — Mechanical Engineering Student Portfolio</title>
+<meta name="description" content="Jack Cooper is a mechanical engineering student at the University of Maryland focused on CAD, mechanical design, robotics, and prototyping. Explore his engineering projects and technical background.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">JACK COOPER<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav">
+      <a href="index.html#home" class="active">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HOME / HERO ============ -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Mechanical Engineering Student · University of Maryland</p>
+        <h1 class="display">Jack Cooper</h1>
+        <p class="lede">Engineering student interested in mechanical design, CAD,
+          robotics, and turning ideas into physical systems. Currently seeking
+          mechanical engineering internships for Summer 2027.</p>
+        <div class="btn-row">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#resume" class="btn btn-secondary">View Resume</a>
+        </div>
+      </div>
+
+      <img class="hero-photo" src="images/Jack_Cooper.jpg"
+           alt="Headshot of Jack Cooper">
+    </div>
+  </section>
+
+  <!-- ============ INTERESTS ============ -->
+  <section class="interests">
+    <div class="wrap interest-grid">
+      <div class="interest-item">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h4>Mechanical Design</h4>
+        <p>Designing parts and assemblies that work together as a system</p>
+      </div>
+      <div class="interest-item">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4>CAD &amp; Modeling</h4>
+        <p>SolidWorks and Fusion360 for part and assembly modeling</p>
+      </div>
+      <div class="interest-item">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M9 3h6M9 7v-4M15 7v-4M12 12v3"/></svg>
+        </div>
+        <h4>Robotics</h4>
+        <p>Arduino-based control, sensors, and motion systems</p>
+      </div>
+      <div class="interest-item">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10l8-6 8 6v10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h4>Prototyping</h4>
+        <p>Iterating from concept to a working physical part</p>
+      </div>
+      <div class="interest-item">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M4 12h3M17 12h3M12 4v3M12 17v3M6.3 6.3l2.1 2.1M15.6 15.6l2.1 2.1M6.3 17.7l2.1-2.1M15.6 8.4l2.1-2.1"/></svg>
+        </div>
+        <h4>Manufacturing</h4>
+        <p>3D printing and hands-on fabrication</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Selected Work</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A closer look at the mechanical design, CAD, and
+          robotics projects I've worked on and how I approached each problem and
+          what I contributed.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <a href="sheet-metal-roller.html" class="project-card">
+          <div class="card-media">
+            <img class="card-image" src="images/roller/Full-assembly-render.png" alt="SolidWorks render of the full sheet metal roller assembly">
+          </div>
+          <div class="card-body">
+            <p class="card-tag"> CAD / Mechanical Design</p>
+            <h3>Sheet Metal Roller</h3>
+            <p>A mechanical assembly of 30 unique parts,
+              designed and modeled in SolidWorks with attention to how each
+              component fits and functions within the full system.</p>
+            <div class="tag-row">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">Assembly Design</span>
+              <span class="tag">Mechanical Design</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a href="arduino-rover.html" class="project-card">
+          <div class="card-media">
+            <img class="card-image" src="images/rover/Rover no arms.png" alt="Photo of the Arduino-controlled rover">
+          </div>
+          <div class="card-body">
+            <p class="card-tag"> Robotics</p>
+            <h3>Arduino Rover</h3>
+            <p>An Arduino-controlled vehicle built to pick up and weigh a
+              block within a set mass range, combining mechanical design,
+              electronics, and programming.</p>
+            <div class="tag-row">
+              <span class="tag">Arduino</span>
+              <span class="tag">Robotics</span>
+              <span class="tag">Mechanical Design</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a href="phone-stands.html" class="project-card compact">
+          <div class="card-media">
+            <img class="card-image" src="images/Phone-Stand/Phone-Stand-Real.png" alt="3D printed phone stand">
+          </div>
+          <div class="card-body">
+            <p class="card-tag"> CAD / Prototyping</p>
+            <h3>3D Printed Phone Stands</h3>
+            <p>A small 3D-design project: modeling, printing, and
+              refining a functional phone stand across several versions.</p>
+            <div class="tag-row">
+              <span class="tag">CAD</span>
+              <span class="tag">3D Printing</span>
+              <span class="tag">Design Iteration</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">A bit about me</h2>
+        <p>I'm a mechanical engineering student at the University of
+          Maryland's A. James Clark School of Engineering. I enjoy engineering because
+        of the problem-solving nature of it. I love thinking through different solutions
+      and testing different methods before finally achieving my goals. One day, I hope that 
+    my contributions in engineering will make a real and positive difference in the world.</p>
+        <p>Most of what I know, I've learned by building things hands-on: modeling
+          mechanical assemblies, working through statics and design
+          constraints, and troubleshooting robotics projects when they don't
+          work the way I thought they would. I'm still early in my
+          engineering career, but I'm genuinely curious about how and why
+          things work, and I like the process of getting a design from a
+          sketch to something physical.</p>
+          <p>Outside of engineering, I enjoy many other things. I watch or play sports 
+            almost every day and try to stay active whenever I can. I love being out in 
+            nature and playing my guitar. I also try to spend as much time as I can with
+            my two dogs, Frankie and Rocky. </p>
+      </div>
+      <div class="fact-list">
+        <div class="fact-row"><div class="fact-key">School</div><div class="fact-val">University of Maryland</div></div>
+        <div class="fact-row"><div class="fact-key">College</div><div class="fact-val">A. James Clark School of Engineering</div></div>
+        <div class="fact-row"><div class="fact-key">Major</div><div class="fact-val">Mechanical Engineering</div></div>
+        <div class="fact-row"><div class="fact-key">Seeking</div><div class="fact-val">Summer 2027 Internships</div></div>
+        <div class="fact-row"><div class="fact-key">Focus</div><div class="fact-val">CAD, Design, Robotics</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Background</p>
+        <h2 class="section-title">Technical Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <h4>CAD</h4>
+          <ul>
+            <li>SolidWorks</li>
+            <li>Fusion360</li>
+            <li>Onshape</li>
+          </ul>
+        </div>
+        <div class="skill-cat">
+          <h4>Engineering</h4>
+          <ul>
+            <li>Mechanical Design</li>
+            <li>Statics / Dynamics</li>
+            <li>Engineering Analysis</li>
+            <li>Prototyping</li>
+          </ul>
+        </div>
+        <div class="skill-cat">
+          <h4>Programming / Electronics</h4>
+          <ul>
+            <li>MATLAB</li>
+            <li>Arduino</li>
+          </ul>
+        </div>
+        <div class="skill-cat">
+          <h4>Fabrication</h4>
+          <ul>
+            <li>3D Printing</li>
+            <li>Laser Cutting</li>
+            <li>Basic Machining</li>
+          </ul>
+        </div> 
+      </div>
+      <div class="cert-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        SolidWorks Certified (CSWA)
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Resume</p>
+        <h2 class="section-title">Full Resume</h2>
+        <p class="section-sub">For the complete overview — education,
+          experience, and skills in one place.</p>
+      </div>
+      <div class="resume-box">
+        <div class="rtext">
+          <h3>Jack Cooper — Resume</h3>
+        </div>
+        <div class="rbtns">
+          <a href="assets/Jack-Cooper-Resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">View Resume</a>
+          <a href="assets/Jack-Cooper-Resume.pdf" class="btn btn-secondary" download="Jack-Cooper-Resume.pdf" type="application/pdf"> Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">The best ways to reach me. I am always happy to talk about
+          any of the projects above in more detail.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:jcooperyyzz@gmail.com" class="contact-card">
+          <p class="clabel">Email</p>
+          <p class="cval">jcooperyyzz@gmail.com</p>
+        </a>
+        <a href="https://linkedin.com/in/jack-francis-cooper" target="_blank" rel="noopener" class="contact-card">
+          <p class="clabel">LinkedIn</p>
+          <p class="cval">linkedin.com/in/jack-francis-cooper</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jack Cooper — Mechanical Engineering Portfolio</span>
+    <span>University of Maryland · Rev. 2026</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

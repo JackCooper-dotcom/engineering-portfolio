@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arduino Rover — Jack Cooper</title>
+<meta name="description" content="A group robotics project: an Arduino-controlled rover designed to pick up and weigh a block, built by Jack Cooper and team, University of Maryland.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">JACK COOPER<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects" class="active">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="proj-hero">
+    <div class="wrap-narrow">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+      <div class="proj-meta-row">
+        <span class="proj-tag team">Group Project</span>
+        <span class="proj-tag">Robotics</span>
+      </div>
+      <h1 class="proj-title">Arduino Rover</h1>
+      <p class="proj-lede">An Arduino-controlled
+        vehicle designed to pick up a block, weigh it and navigate an obstacle course.</p>
+    </div>
+  </section>
+
+  <!-- Featured photo of the rover, shown large before the written sections -->
+  <div class="wrap-narrow">
+    <figure class="project-figure featured">
+      <img class="project-image" src="images/Rover/Rover.png"
+           alt="Photo of the completed Arduino-controlled rover">
+    </figure>
+    <p class="project-caption">Completed rover</p>
+  </div>
+  <div class="proj-body">
+    <div class="proj-stage">
+      <p class="stage-num">Objective</p>
+      <h2>The task</h2>
+      <p>The rover needed to autonomously locate, pick up, weigh, and determine
+        the material of the block. The rover had to print either light, medium, or heavy,
+        along with foam or plastic, to an external display screen. After picking up the block, the vehicle
+        had to autonomously navigate an obstacle course and finally go over or under the finish
+        line. Additionally, the design of the rover was subject to strict mass and price limits, along
+        with restrictions about where certain parts could be purchased from.
+      </p>
+      <figure class="project-figure featured">
+      <img class="project-image" src="images/Rover/Arena.PNG"
+           alt="Map of the competition arena">
+    </figure>
+    <p class="project-caption">Map of Arena</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">System Design</p>
+      <h2>How the system was structured</h2>
+      <p>The rover combined a mobile base with a linear actuator for the
+        pickup mechanism, driven by motors and monitored with sensors, all
+        controlled through an Arduino Uno. We also utilized a wifi module to connect to
+        an overhead camera which scanned an Aruco marker that was taped on the top
+        of our rover to track its movement.</p>
+      <div class="spec-mini">
+        <div class="row"><div class="k">CONTROLLER</div><div class="v">Arduino Uno</div></div>
+        <div class="row"><div class="k">DRIVE</div><div class="v">Motors, wheels (radius ≈ 3 cm)</div></div>
+        <div class="row"><div class="k">PICKUP MECHANISM</div><div class="v">Linear actuator, ramp</div></div>
+        <div class="row"><div class="k">TARGET MASS RANGE</div><div class="v">≈ 100–300 g</div></div>
+      </div>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Mechanical Design</p>
+      <h2>Mechanical components</h2>
+      <p>The mechanical aspects of the rover included the wheels, chassis, ramp, and
+        the linear actuator mechanism used to pick up the block. Designing
+        this system meant accounting for concepts like torque, RPM, friction,
+        and force to make sure the motors and mechanism could actually move
+        and lift the block reliably while also being mobile enough to navigate the course.</p>
+      <p><strong>Individual Contribution:</strong> I assembled and created the parts needed
+      for the chassis and ramp part of the rover. I modeled the base of the vehicle and 
+    laser cut it out of recycled PLA. I also 3D printed the walls and attached them to the base 
+     with glue and screws. </p>
+      <div class="placeholder-grid">
+    <figure class="project-figure featured">
+      <img class="project-image" src="images/Rover/Rover-CAD.jpg"
+           alt="CAD model of the rover chassis">
+    </figure>
+       <figure class="project-figure featured">
+      <img class="project-image" src="images/Rover/Rover no arms.png"
+           alt="CAD model of the rover without pickup arms">
+    </figure>
+      </div>
+    </div>
+    <div class="proj-stage">
+      <p class="stage-num">Electronics</p>
+      <h2>Sensors &amp; wiring</h2>
+      <p>The rover used sensors alongside the Arduino Uno and motors to
+        support the pickup, weighing, and material determining tasks. We heavily relied
+        on ultrasonic sensors for most of the rover tasks. We used them to determine the 
+      object's material by using the fact that the foam block absorbed more sound waves than the plastic. 
+    This difference was calculated and written into the code for the Arduino to print out which
+  material it was seeing based on the reading from the ultrasonic sensor. Additionally, the ultrasonic
+sensors were used in general navigation code to get around the obstacles. We also used one piezo sensor
+on the bottom of the ramp to weigh the mass of the block. Lastly, linear actuators were used to move
+arms that would hold the block in place so we could get a consistent reading of its mass and material. 
+All of these components were wired and coded directly through the Arduino. </p>
+      <p><strong>Individual Contribution:</strong> I worked mostly on the ultrasonic sensors. I spent most
+      of my time figuring out and coding the difference in readings between the plastic and 
+    foam blocks. I also worked on wiring the ultrasonic sensors into the Arduino and making sure they were
+  mounted correctly on the vehicle to get accurate readings.</p>
+      <figure class="project-figure">
+        <img class="project-image" src="images/Rover/Wiring.png"
+             alt="Wiring diagram of the rover's electronics">
+      </figure>
+      <p class="project-caption">Wiring / electronics layout</p>
+    </div>
+    <div class="proj-stage">
+      <p class="stage-num">Testing</p>
+      <h2>Putting it through its paces</h2>
+      <p>We tested the rover numerous times and the changes can be seen through
+        how the CAD models changed over time. One of our first major changes was with the
+        3D printed arms that held the block in place. When testing with our original arms, we
+        found that the block was not close enough to the ultrasonic sensors and the arms did not
+        consistently get the block in the same place. We then changed the design of the arms to fix
+        these problems by offsetting their heights and lengths. We also constantly tested our obstacle
+        navigation code on the actual arena and tweaked it after every test run. The hours of testing 
+        each component allowed us to minimize the errors on the rover.
+      </p>
+     <figure class="project-figure">
+        <img class="project-image" src="images/Rover/Iterations.png"
+             alt="Photos of the rover's arm design iterations">
+      </figure>
+      <p class="project-caption">Design changes over time</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Problems &amp; Iterations</p>
+      <h2>What went wrong, and what changed</h2>
+      <ul>
+        <li>One issue we faced was with our Arduino overheating. The day before the
+          final run-through, our Arduino burnt out and we didn't know why. Eventually, we figured out 
+          that our kill switch was poorly wired, causing a constant flow of current into the 
+          Arduino. After solving this issue, we had very little time to further test our final
+          code. However, despite this major issue, we still had several successful run-throughs of the course.
+        </li>
+        <li>The chassis was the most iterated part of the rover. We went through four different
+          attempts at a design before we came up with the final model. Our first idea was to use laser-cut acrylic
+        for the chassis because it was strong and easy to put together. The issue was that our rover became
+      too heavy and our motors couldn't fit through the precut holes. We then decided to use a fully 
+    3D printed model to make it light while still having internal strength. However, the issue 
+  we ran into was that the provided 3D printers couldn't print the long, flat bottom without warping it in some way.
+All of the prints we made were unusable due to this. So, we shifted to the final design of connecting a laser-cut PLA bottom
+with 3D printed side walls. This strategy worked because the chassis relied less on 3D printing and contained
+the optimal strength while also not being too heavy.</li>
+        <li>The motors we decided to buy were not perfect and caused us to use different strategies
+          to accommodate. The issue with our motors was that they were too strong and had too much
+          torque for what our vehicle needed. As a result, we utilized pulse-width modulation in our code 
+          to monitor the output torque to what we needed it to be. This strategy worked very well
+          and saved us from having to buy new motors.
+        </li>
+      </ul>
+      <figure class="project-figure">
+        <img class="project-image" src="images/Rover/Chassis.png"
+             alt="Photos of the chassis design iterations">
+      </figure>
+      <p class="project-caption">Chassis iterations</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Final Result</p>
+      <h2>How it performed</h2>
+      <p>During the final runs, our rover was able to complete 5/6 mission tasks cumulatively. We ultimately
+        had the second highest score in our class section. Additionally, our rover was nominated 
+        for the course-wide "Best Constructed" award, which went to the vehicle that had the best and
+        most creative and organized construction.</p>
+
+      <!--
+        Video fix: the original tag was missing "controls" and a proper
+        closing </video>, which is why it appeared but never played. This
+        version adds controls, preload, and a typed <source> child. File
+        path is unchanged.
+        NOTE: this path uses a lowercase "rover" folder (images/rover/...)
+        while the images above use a capital "Rover" folder
+        (images/Rover/...). If the video still doesn't load once uploaded,
+        double-check the actual folder name on disk — most web hosts are
+        case-sensitive even though your local file browser may not be.
+        Also note .mov files aren't reliably playable in all browsers; if it
+        doesn't play after the markup fix, exporting a copy as .mp4 (H.264)
+        is the most compatible option.
+      -->
+      <video class="project-video" controls preload="metadata">
+        <source src="images/rover/Rover.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Lessons Learned</p>
+      <h2>Takeaways</h2>
+      <p>This project was a good introduction to how mechanical design,
+        electronics, and code all have to work together. What might 
+        look fine on paper still has to deal with real friction, real motor
+        limits, and real wiring. I also got experience with what it's like to 
+      be a part of an engineering team working on a real project. I learned what it's 
+    like to delegate tasks along with completing my own by a strict deadline. Overall, this project 
+  was my first introduction to the engineering world and taught me a lot about how real engineers problem-solve 
+    and work together to achieve their goals.</p>
+    </div>
+
+  </div>
+
+  <div class="next-project">
+    <a href="phone-stands.html">Next project: 3D Printed Phone Stands →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jack Cooper — Mechanical Engineering Portfolio</span>
+    <span>University of Maryland · Rev. 2026</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="lightbox.js"></script>
+</body>
+</html>

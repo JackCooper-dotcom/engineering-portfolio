@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Printed Phone Stand — Jack Cooper</title>
+<meta name="description" content="A small CAD and 3D printing project by Jack Cooper: designing and iterating on a functional 3D printed phone stand.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">JACK COOPER<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects" class="active">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="proj-hero">
+    <div class="wrap-narrow">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+      <div class="proj-meta-row">
+        <span class="proj-tag">Individual Project</span>
+        <span class="proj-tag">CAD / Prototyping</span>
+      </div>
+      <h1 class="proj-title">3D Printed Phone Stand</h1>
+      <p class="proj-lede">A small-scale project focused on the
+        iterative process of modeling and printing a useable
+        phone stand.</p>
+    </div>
+  </section>
+
+  <div class="proj-body">
+
+    <div class="proj-stage">
+      <p class="stage-num">Overview</p>
+      <h2>What this project was</h2>
+      <p>This was a project to design and 3D print a phone
+        stand as a way to practice the design process of going from a CAD
+        model to a printed part to testing and refining.</p>
+      <div class="project-gallery">
+        <div>
+          <figure class="project-figure">
+            <img class="project-image" src="images/Phone-Stand/Phone-Stand-Cad.png"
+                 alt="CAD model of the phone stand in SolidWorks">
+          </figure>
+          <p class="project-caption">CAD model</p>
+        </div>
+        <div>
+          <figure class="project-figure">
+            <img class="project-image" src="images/Phone-Stand/Phone-Stand-Drawing.png"
+                 alt="Engineering drawing of the phone stand with dimensions">
+          </figure>
+          <p class="project-caption">Engineering drawing</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Design Process</p>
+      <h2>From model to print</h2>
+      <p>The design process started with modeling the stand in CAD, then
+        3D printing it to check its functionality in person. The goals
+        when designing the CAD model were to make it as light as possible
+        while still being able to hold my iPhone stably. Additionally, I 
+        wanted to accommodate charging my phone in both horizontal and vertical
+        orientations.
+        </p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Analysis</p>
+      <h2>Evaluating structural performance</h2>
+      <p>3D printing made it easy to test a design, see what didn't work,
+        and adjust quickly. My first model worked, but I thought it was too heavy,
+        so I decided to make a more optimized design. In my second iteration, I
+        cut out material from the bottom and back, which lessened the mass but ultimately
+        failed in reality as the supports were too thin. In my last model, I added back
+        more material to the supports and ran an FEA analysis to determine if the stand
+        would work with the weight of my phone on it. Since the yield strength of the PLA 
+        was greater than the maximum stress in the stand from the phone, I knew
+        it wouldn't fail.
+      </p>
+      <figure class="project-figure">
+        <img class="project-image" src="images/Phone-Stand/Fea Phone.png"
+             alt="FEA stress analysis of the phone stand">
+      </figure>
+      <p class="project-caption">FEA analysis of final iteration</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Final Design</p>
+      <h2>The finished stand</h2>
+      <p> The final stand achieved all of the goals I set out at the start
+        of the project. The stand was light, compact, and strong enough
+        to hold my phone and allow charging in either position. 
+      
+      </p>
+      <figure class="project-figure featured">
+        <img class="project-image" src="images/Phone-Stand/Phone 2.44.24 PM.png"
+             alt="The 3D printed phone stand in use">
+      </figure>
+      <p class="project-caption">Final print — in use</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">What I Learned</p>
+      <h2>Takeaways</h2>
+      <p>Even a small project like this reinforced how much design
+        improves through fast and physical iteration. It's a lot easier to
+        spot a flaw in a printed part than on a screen. This project was the 
+        first time that I engineered a tool that I could use in my 
+        everyday life. Although this project was technically difficult, I 
+        am still proud of my ability to design and iterate different ways
+        to achieve the goals I set out at the start.
+        </p>
+    </div>
+
+  </div>
+
+  <div class="next-project">
+    <a href="sheet-metal-roller.html">Back to first project: Sheet Metal Roller →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jack Cooper — Mechanical Engineering Portfolio</span>
+    <span>University of Maryland · Rev. 2026</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="lightbox.js"></script>
+</body>
+</html>

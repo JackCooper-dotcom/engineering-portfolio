@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheet Metal Roller — Jack Cooper</title>
+<meta name="description" content="A 30-part sheet metal roller mechanical assembly designed and modeled in SolidWorks by Jack Cooper, University of Maryland mechanical engineering student.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">JACK COOPER<span class="dot">.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#projects" class="active">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#resume">Resume</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="proj-hero">
+    <div class="wrap-narrow">
+      <a href="index.html#projects" class="back-link">← Back to Projects</a>
+      <div class="proj-meta-row">
+        <span class="proj-tag">Individual Project</span>
+        <span class="proj-tag">CAD / Mechanical Design</span>
+      </div>
+      <h1 class="proj-title">Sheet Metal Roller</h1>
+      <p class="proj-lede">A mechanical assembly of 30 unique
+        parts, designed and modeled in SolidWorks — one of the more complex
+        systems I've worked on.</p>
+    </div>
+  </section>
+
+  <!-- Large featured image, shown prominently before the written sections -->
+  <div class="wrap-narrow">
+    <figure class="project-figure featured">
+      <img class="project-image" src="images/roller/Full-assembly-render.png"
+           alt="SolidWorks render of the full sheet metal roller assembly">
+    </figure>
+    <p class="project-caption">Full assembly — SolidWorks render</p>
+  </div>
+
+  <div class="proj-body">
+
+    <div class="proj-stage">
+      <p class="stage-num">Overview</p>
+      <h2>What this project was</h2>
+      <p>The sheet metal roller is a mechanical assembly made up of
+         30 unique parts, all designed and modeled individually
+        in SolidWorks. Besides modeling single components, the project
+        required thinking about the assembly as a whole system. I needed
+        to know how each part needed to fit, move, or connect relative to the others.</p>
+    
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Objective</p>
+      <h2>Goal of the design</h2>
+      <p>The guidelines of the project required 30 unique parts
+        that were all assembled together to create a cohesive system. 
+        Additionally, the assembly needed to have linear and circular motion
+        that could be modeled through SolidWorks' animation software. Additionally,
+        I had to make sure that the system would work in real life through the 
+        use of FEA analysis on different parts of the assembly. I chose a sheet
+        metal roller because I felt it was a good way to show motion while also
+        having interesting parts to model.
+      </p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Design Process</p>
+      <h2>Approach</h2>
+      <p>Designing a system with this many interacting parts meant working
+        through the assembly deliberately rather than modeling components in
+        isolation. As a result, the system was split up into different subassemblies: 
+        handle, drive train, base, and plates. This way, the daunting goal of assembling
+        30 parts got simplified into 4 subassemblies. These subassemblies would then be 
+        put together to make up the whole system. After the system was assembled, FEA and
+        animation analysis could be run.
+     </p>
+      <div></div>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">CAD &amp; Modeling</p>
+      <h2>Modeling the parts</h2>
+      <p>Each of the roller's 30 components was modeled individually
+        in SolidWorks. The models were largely based on other CAD drawings of sheet
+        metal rollers found on the internet. However, I often had to use creative liberties
+        where the source documents didn't have accurate measurements or details. 
+        In SolidWorks, various tools and features were used in order to model
+        the complex parts. For example, bolts were made by using the thread tool so 
+        that they could accurately fit into a hole. Additionally, the chain links were
+        created with the chain tool in order to exactly fit them around two sprockets in
+        the drive train subassembly. The dimensions and designs of each part had to be 
+        constantly altered to allow a seamless fit during the assembly portion of the 
+        project. </p>
+
+      <div class="engineering-gallery">
+        <p class="gallery-label">Base Plate</p>
+        <div class="project-gallery">
+          <div>
+            <figure class="project-figure">
+              <img class="project-image" src="images/roller/Part.png"
+                   alt="SolidWorks CAD model of a roller part">
+            </figure>
+            <p class="project-caption">CAD model</p>
+          </div>
+          <div>
+            <figure class="project-figure">
+              <img class="project-image" src="images/roller/Part-Drawing.png"
+                   alt="Engineering drawing of the roller part with dimensions">
+            </figure>
+            <p class="project-caption">Engineering drawing</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="engineering-gallery">
+        <p class="gallery-label">Sprocket</p>
+        <div class="project-gallery">
+          <div>
+            <figure class="project-figure">
+              <img class="project-image" src="images/roller/Sprocket.png"
+                   alt="SolidWorks CAD model of the sprocket">
+            </figure>
+            <p class="project-caption">CAD model</p>
+          </div>
+          <div>
+            <figure class="project-figure">
+              <img class="project-image" src="images/roller/Sprocket Drawing.png"
+                   alt="Engineering drawing of the sprocket with dimensions">
+            </figure>
+            <p class="project-caption">Engineering drawing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Assembly</p>
+      <h2>Bringing it together</h2>
+      <p>With the individual parts modeled, the next step was assembling
+        them into a single functioning system. I had to check that components
+        interacted correctly and that the assembly could be built the way it
+        was designed. Most of the parts and subassemblies were easily mated together
+        using basic tools like coincident and parallel mates. The drive train was 
+        especially difficult, though, as it required movement of the chain, sprockets,
+        handle, and round bars of the assembly. To do this, I utilized the gear mate
+        in order for the chain to move the sprockets in a realistic fashion. </p>
+      <figure class="project-figure featured">
+        <img class="project-image" src="images/roller/1787517806012-7870f6ba-27e8-463a-b178-33b0d777e3fd_1.png"
+             alt="Exploded view of the sheet metal roller assembly">
+      </figure>
+      <p class="project-caption">Exploded assembly view</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Engineering Decisions</p>
+      <h2>Key decisions along the way</h2>
+      <ul>
+        <li>One specific design decision that I made was the material that each part should be made out of.
+          To do this, I ran an FEA analysis using different materials to determine what the base or the plates should
+          be made out of to ensure success if the model was to be manufactured. In the end, most of the parts
+          were chosen to be made of AISI 1020 steel with the supporting plates made of aluminum to lower
+          weight.
+        </li>
+        <li>One design constraint that I had to consider was the manufacturability of the design.
+          Special consideration was taken to make sure each part could fit together easily and 
+          the assembly itself could stand under its own weight. Measurements and drawings were used that
+          could be followed in real life if someone actually wanted to construct it.
+        </li>
+        <li>One trade-off that I considered was whether or not I wanted to include screws or bolts
+          for the mating of every part. I ultimately decided to not include them because I felt that
+          it would make the assembling more complicated and was not a skill that needed to be shown off.
+        </li>
+      </ul>
+      <figure class="project-figure featured">
+        <img class="project-image" src="images/roller/FEA.PNG"
+             alt="FEA analysis of base">
+      </figure>
+      <p class="project-caption">FEA analysis of base</p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Challenges</p>
+      <h2>What was difficult</h2>
+      <p>One major challenge that I ran into was during the assembling process. The reference that 
+        our system was based around did not detail how each part would fit together in each subassembly.
+        Additionally, many of the measurements of the reference did not allow for a seamless 
+        match between each part. Consequently, I had to use trial and error to determine the 
+        correct measurements and order that each part should have. This was the most frustrating
+        and painstaking part of the entire project.
+      </p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Final Design</p>
+      <h2>The completed assembly</h2>
+      <p>The final assembly met all of the original objectives set at the start of the project.
+        The sheet metal roller included exactly 30 unique parts that fit together to create one system. 
+        The drive train allowed for circular and linear motion, from the spinning of the handle to
+        each chain link moving around the sprockets. Additionally, the final model allowed for 
+        real manufacturability and realistic dimensions and drawings for anyone to follow.
+      </p>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Final Presentation</p>
+      <h2>Final assembly video</h2>
+      <p>A short animation of the completed assembly, showing how the
+        components fit and move together with linear and circular motion.</p>
+      <!--
+        Video fix: the original tag used an unsupported "alt" attribute on
+        <video>, had no closing tag, and was missing "controls" — which is
+        why it appeared but never played. This version uses a <source>
+        child with an explicit MIME type and proper controls, per standard
+        HTML5 video markup. File path is unchanged.
+      -->
+      <video class="project-video" controls preload="metadata">
+        <source src="images/roller/Animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">Specifications</p>
+      <h2>At a glance</h2>
+      <div class="spec-mini">
+        <div class="row"><div class="k">SOFTWARE</div><div class="v">SolidWorks</div></div>
+        <div class="row"><div class="k">PART COUNT</div><div class="v">30 unique parts</div></div>
+        <div class="row"><div class="k">SCOPE</div><div class="v">AISI 1020 Steel + Aluminum</div></div>
+      </div>
+    </div>
+
+    <div class="proj-stage">
+      <p class="stage-num">What I Learned</p>
+      <h2>Takeaways</h2>
+      <p>Working through a 30-part assembly reinforced how much of mechanical
+        design happens at the system level, not just the part level. I was forced to
+        think about how components interact, which is a different skill from
+        modeling any one part well. In addition, I gained an understanding of the importance
+      that accurate measurements and drawings can have when trying to use a reference. Through
+      this project, I got an insight into what professional CAD designers must do to create
+      accurate models for their company's products.
+    </p>
+    </div>
+
+  </div>
+
+  <div class="next-project">
+    <a href="arduino-rover.html">Next project: Arduino Rover →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jack Cooper — Mechanical Engineering Portfolio</span>
+    <span>University of Maryland · Rev. 2026</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="lightbox.js"></script>
+</body>
+</html>
